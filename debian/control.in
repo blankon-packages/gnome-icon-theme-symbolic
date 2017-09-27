@@ -1,0 +1,35 @@
+Source: gnome-icon-theme-symbolic
+Section: gnome
+Priority: optional
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: @GNOME_TEAM@
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               gnome-pkg-tools (>= 0.10)
+Build-Depends-Indep: gettext,
+                     intltool (>= 0.40.0),
+                     pkg-config,
+                     gtk-update-icon-cache,
+                     icon-naming-utils (>= 0.8.7)
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-icon-theme-symbolic
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-icon-theme-symbolic
+Homepage: https://wiki.gnome.org/Design/OS/SymbolicIcons
+
+Package: gnome-icon-theme-symbolic
+Architecture: all
+Section: gnome
+Depends: ${misc:Depends},
+         hicolor-icon-theme,
+         gnome-icon-theme (>= ${gnome:Version}),
+         gnome-icon-theme (<< ${gnome:NextVersion})
+Enhances: gnome-icon-theme
+Description: GNOME desktop icon theme (symbolic icons)
+ This package contains a set of icons used by the GNOME desktop.
+ The icons are used in the panel menu, and in nautilus and other
+ applications, to represent the different applications, files,
+ directories, and devices.
+ .
+ These stylised icons are symbolic variations on the standard
+ theme.
